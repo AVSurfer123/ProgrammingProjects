@@ -29,7 +29,7 @@ public class LetterFrequencyDecipherer {
 						output[j] =  (char) ((val>0) ? val+33: val+94+33); 
 					}
 				}
-				System.out.println("Attempted shift: " + shift + "\t Message: " + String.valueOf(output));
+				System.out.println("Common letter: " + (char)common[i] + "\t Attempted shift: " + shift + "\t Message: " + String.valueOf(output));
 			}
 			System.out.println("If you would like to continue decrypting this message, enter 0. If you would like to decrypt a different message, enter 1. Enter anything to finish.");
 			String repeat = in.nextLine();
