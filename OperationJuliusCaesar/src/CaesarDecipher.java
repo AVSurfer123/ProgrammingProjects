@@ -3,14 +3,10 @@ import java.util.*;
 
 public class CaesarDecipher {
 
-	public CaesarDecipher() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter the encrypted message:");
-		char[] input = in.nextLine().toCharArray(), check= new char[input.length];
+		char[] input = in.nextLine().toCharArray(), check= new char[input.length];	//change to in.nextLine() after testing
 		boolean found = false;
 		int shift = 0;
 		while(!found && shift<94){
@@ -61,8 +57,13 @@ public class CaesarDecipher {
 			
 		}
 		if(!found){
-			System.out.println("You entered a non English phrase or an improper encryption. Try again.");
-			main(null);
+			System.out.println("You entered a non English phrase or an improper encryption. Enter 0 to try again.");
+			if(in.nextLine().equals("0")){
+				main(null);
+			}
+			else{
+				System.out.println("Decryption is complete.");
+			}
 		}
 		
 	}
